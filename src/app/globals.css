@@ -1,26 +1,72 @@
 @import "tailwindcss";
+@import "@radui/ui/themes/default.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-gray-1000: var(--rad-ui-color-gray-1000);
+  --color-gray-900: var(--rad-ui-color-gray-900);
+  --color-gray-950: var(--rad-ui-color-gray-950);
+  --color-gray-800: var(--rad-ui-color-gray-800);
+  --color-gray-700: var(--rad-ui-color-gray-700);
+  --color-gray-600: var(--rad-ui-color-gray-600);
+  --color-gray-500: var(--rad-ui-color-gray-500);
+  --color-gray-400: var(--rad-ui-color-gray-400);
+  --color-gray-300: var(--rad-ui-color-gray-300);
+  --color-gray-200: var(--rad-ui-color-gray-200);
+  --color-gray-100: var(--rad-ui-color-gray-100);
+  
+  --color-primary-900: var(--rad-ui-color-primary-900);
+  --color-primary-800: var(--rad-ui-color-primary-800);
+  --color-primary-700: var(--rad-ui-color-primary-700);
+  --color-primary-600: var(--rad-ui-color-primary-600);
+  --color-primary-500: var(--rad-ui-color-primary-500);
+  
+  --color-accent-500: var(--rad-ui-color-accent-500);
+  --color-success-500: var(--rad-ui-color-success-500);
+  --color-warning-500: var(--rad-ui-color-warning-500);
+  --color-error-500: var(--rad-ui-color-error-500);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.border-dancer {
+    height: 5px;
+    background-color: var(--rad-ui-color-gray-1000);
+    width: 40%;
+    position: relative;
+    bottom: -3px;
+    left: 5%;
+    -webkit-animation-name: moveslikeajagger;
+    animation-name: moveslikeajagger;
+    -webkit-animation-duration: 20s;
+    animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@-webkit-keyframes moveslikeajagger {
+    0% {
+        left: 5%
+    }
+
+    50% {
+        left: 55%
+    }
+
+    to {
+        left: 5%
+    }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes moveslikeajagger {
+    0% {
+        left: 5%
+    }
+
+    50% {
+        left: 55%
+    }
+
+    to {
+        left: 5%
+    }
 }
