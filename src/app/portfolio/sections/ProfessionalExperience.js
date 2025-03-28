@@ -100,9 +100,9 @@ techStack: [
               <li key={index}>{description}</li>
             ))}
           </ul>
-          <ul className="text-sm my-4">
+          <ul className="text-sm my-4 flex flex-wrap gap-2">
             {experience.techStack.map((item, index) => (
-              <h3 key={index}>{item}</h3> //update this
+              <Badge key={index} color="gray" size="small">{item}</Badge>
             ))}
           </ul>
         </div>
